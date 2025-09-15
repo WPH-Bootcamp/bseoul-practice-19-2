@@ -1,3 +1,7 @@
+import MainComponent, {
+  GreetingWithClass,
+  GreetingWithFunction,
+} from "./materi/1-Class-vs-Functional-Component";
 import UserProfile from "./materi/2-Props";
 import { PropDrilling } from "./materi/3-Prop-Drilling";
 import ButtonCustom from "./materi/4-Rest-Param";
@@ -27,6 +31,12 @@ function App() {
   return (
     <>
       <div style={{ height: "2000dvh", fontFamily: "arial" }}>
+        {/* 1. Class vs Functional Component */}
+        <MainComponent name="Chris John" age={23} />
+        <GreetingWithClass name="Ucup" />
+        <GreetingWithFunction name="Rencup" age={30} />
+        {/* 1. Class vs Functional Component */}
+        <hr />
         {/* 2. Props */}
         <UserProfile
           name={"Handi"}
@@ -47,15 +57,11 @@ function App() {
           }}
         />
         {/* 2. Props */}
-
         <hr />
-
         {/* 3. Prop Drilling */}
         <PropDrilling />
         {/* 3. Prop Drilling */}
-
         <hr />
-
         {/* 4. Rest Param */}
         <ButtonCustom
           onClick={() => {
@@ -68,23 +74,17 @@ function App() {
           Click Saya
         </ButtonCustom>
         {/* 4. Rest Param */}
-
         <hr />
-
         {/* 5. Handle-ClassName-&-Style */}
         <CustomButton size="large" variant="red" disabled={false}>
           Tekan saya
         </CustomButton>
         {/* 5. Handle-ClassName-&-Style */}
-
         <hr />
-
         {/* 6. Spread Syntax */}
         <CustomCard {...cardCustomProps} />
         {/* 6. Spread Syntax */}
-
         <hr />
-
         {/* 7. Inline Style */}
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <ExampleInlineStyle name="Umbara" />
@@ -94,17 +94,13 @@ function App() {
           <ExampleInlineStyle />
         </div>
         {/* 7. Inline Style */}
-
         <hr />
-
         {/* 8. State */}
         <Counter />
         {/* 8. State */}
-
         {/* 9. Callback Function */}
         <CounterProblem />
         {/* 9. Callback Function */}
-
         {/* 10. Component Lifecycle */}
         <div>
           <button onClick={() => setShow(!show)}>
@@ -112,7 +108,6 @@ function App() {
           </button>
           {show && <ComponentLifeCycle />}
         </div>
-
         {/* 10. Component Lifecycle */}
       </div>
     </>
